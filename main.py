@@ -11,11 +11,14 @@ class ImageApp:
     def __init__(self, root):
         self.root = root
         self.zero = True
+        self.step = 0
         self.root.title("Image Viewer")
         
         self.folder_path = os.path.join(os.getcwd(), "imgs")
+        self.tutorial_folder_path = os.path.join(os.getcwd(), "test_img")
         self.current_set_index = 0
         self.images_set = []
+        self.tutorial_images_set = []
         self.state_file = "image_viewer_state.json"
         self.load_state()
         
@@ -25,10 +28,20 @@ class ImageApp:
         self.results_file = "results.csv"
         self.df = self.load_or_create_results()
 
+        # チュートリアルタイトルとボタン
+        self.title = tk.Label(self.root, text="チュートリアル", font=("Helvetica", 50))
+        self.title.grid(row=0, column=0, columnspan=5, pady=300, padx=540)
+        self.start_button = tk.Button(root, text="開始", command=self.on_next_button_click, font=("Helvetica", 16), width=20, height=5)
+        self.start_button.place(x=600, y=400)
+
+        # 本番タイトルとボタン
+        self.title_h = tk.Label(self.root, text="本番", font=("Helvetica", 50))
+        #self.title_h.grid(row=0, column=0, columnspan=5, pady=300, padx=600)
+        self.start_button_h = tk.Button(root, text="開始", command=self.on_next_button_click, font=("Helvetica", 16), width=20, height=5)
+        #self.start_button_h.place(x=600, y=400)
+
         # 説明文を追加
         self.description_text = tk.Text(root, height=8, width=100, font=("Helvetica", 14), wrap="word", borderwidth=0)
-        self.description_text.grid(row=0, column=0, columnspan=5, pady=10)
-        
         description = (
             "『魅力的である』と感じる料理画像を【左クリック】で【2枚】選択してください.\n"
             "『魅力的でない』と感じる料理画像を【右クリック】で【2枚】選択してください.\n"
@@ -55,22 +68,22 @@ class ImageApp:
         for start, end in bold_ranges:
             self.description_text.tag_add("bold", start, end)
 
-        self.description_text.tag_config("bold", font=("Helvetica", 14, "bold"))
-        self.description_text.config(state=tk.DISABLED)
+        self.description_text.tag_config("bold", font=("Helvetica", 14, "bold"))        
+    
 
         # 画像ラベルを配置
         self.image_labels = [tk.Label(root, borderwidth=2, relief="solid", highlightbackground="white", highlightthickness=7) for _ in range(7)]
 
         self.next_button = tk.Button(root, text="次へ", command=self.on_next_button_click, font=("Helvetica", 16), width=20, height=10)
-        self.next_button.grid(row=2, column=3, pady=5)  # Nextボタンを画像の横に配置
+        #self.next_button.grid(row=2, column=3, pady=5)  # Nextボタンを画像の横に配置
 
         self.root.bind('<Return>', lambda event: self.on_next_button_click())
 
 
         self.image_labels = [tk.Label(root, borderwidth=2, relief="solid", highlightbackground="white", highlightthickness=7) for _ in range(7)]
-        
+        self.text_labels = [tk.Label(root, text="", font=("Helvetica", 16, "bold"), fg="white", bg="red", width=20, height=1) for _ in range(7)]
         self.load_images()
-        self.display_next_set()
+        self.load_tutorial_images()
 
     def load_or_create_results(self):
         if os.path.exists(self.results_file):
@@ -128,8 +141,17 @@ class ImageApp:
             self.save_state()
         else:
             self.load_images_set()
+    
+    def load_tutorial_images(self):
+        fonts = ['DelaGothic', 'HachiMaruPop', 'KaiseiDecol', 'NotoSansJP', 'NotoSerif', 'Reggae', 'Stick']
+        for font in fonts:
+            img_path = os.path.join(self.tutorial_folder_path, f"test_{font}.jpg")
+            if os.path.exists(img_path):
+                self.tutorial_images_set.append(img_path)
 
     def display_next_set(self):
+        self.description_text.grid(row=0, column=0, columnspan=5, pady=10)
+        self.next_button.grid(row=2, column=3, pady=5)  # Nextボタンを画像の横に配置
         print(f"Displaying set {self.current_set_index}")  # デバッグ情報
         if self.current_set_index < len(self.images_set):
             self.reset_label_borders()  # 追加：枠の色をリセット
@@ -137,15 +159,18 @@ class ImageApp:
             for idx, img_path in enumerate(image_paths):
                 try:
                     img = Image.open(img_path)
-                    img.thumbnail((300, 300))
+                    img.thumbnail((280, 280)) #ここで画像サイズ調整
                     img = ImageTk.PhotoImage(img)
                     label = self.image_labels[idx]
                     label.config(image=img)
                     label.image = img
                     label.image_path = img_path  # ここで画像パスをラベルに格納
-                    label.bind("<Button-1>", lambda e, l=label: self.on_left_click(l))
-                    label.bind("<Button-2>", lambda e, l=label: self.on_right_click(l))
-                    label.grid(row=idx // 4 + 1, column=idx % 4, padx=5, pady=5)
+                    label.bind("<Button-1>", lambda e, l=label, t=self.text_labels[idx]: self.on_left_click(l, t))
+                    label.bind("<Button-2>", lambda e, l=label, t=self.text_labels[idx]: self.on_right_click(l, t))
+                    label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8) #ここで画像サイズ調整
+                    text_label = self.text_labels[idx]
+                    text_label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8, sticky="n")
+                    text_label.lower()
                     print(f"Label {idx} placed at row {idx // 3 + 1}, column {idx % 3}")  # デバッグ情報
                 except Exception as e:
                     print(f"Error loading image {img_path}: {e}")  # エラーメッセージ
@@ -163,6 +188,31 @@ class ImageApp:
             random.shuffle(self.images_set)
             self.display_next_set()
 
+    def display_tutorial(self):
+        print(f"Displaying set tutorial")  # デバッグ情報
+        self.description_text.grid(row=0, column=0, columnspan=5, pady=10)
+        self.next_button.grid(row=2, column=3, pady=5)  # Nextボタンを画像の横に配置
+        image_paths = self.tutorial_images_set
+        for idx, img_path in enumerate(image_paths):
+            try:
+                img = Image.open(img_path)
+                img.thumbnail((280, 280)) #ここで画像サイズ調整
+                img = ImageTk.PhotoImage(img)
+                label = self.image_labels[idx]
+                label.config(image=img)
+                label.image = img
+                label.image_path = img_path  # ここで画像パスをラベルに格納
+                label.bind("<Button-1>", lambda e, l=label, t=self.text_labels[idx]: self.on_left_click(l, t))
+                label.bind("<Button-2>", lambda e, l=label, t=self.text_labels[idx]: self.on_right_click(l, t))
+                label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8) #ここで画像サイズ調整
+                text_label = self.text_labels[idx]
+                text_label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8, sticky="n")
+                text_label.lower()
+                print(f"Label {idx} placed at row {idx // 3 + 1}, column {idx % 3}")  # デバッグ情報
+            except Exception as e:
+                print(f"Error loading image {img_path}: {e}")  # エラーメッセージ
+        self.root.update_idletasks()
+
     def reset_label_borders(self):
         for label in self.image_labels:
             label.config(highlightbackground="white", highlightcolor="white")
@@ -170,35 +220,64 @@ class ImageApp:
         self.blue_labels = []
 
     def on_next_button_click(self):
-        print(self.current_set_index)
-        if len(self.red_labels) < 2 or len(self.blue_labels) < 2:
-            self.show_error_message("赤と青の枠はそれぞれ二つ選んでください")
-        else:
-            self.update_scores()
+        if self.step == 0:
+            self.title.grid_remove()
+            self.start_button.place_forget()
+            self.display_tutorial()
+            self.step += 1
+        elif self.step == 1:
+            if len(self.red_labels) < 2 or len(self.blue_labels) < 2:
+                self.show_error_message("赤と青の枠はそれぞれ二つ選んでください")
+            else:
+                #タイトルの表示
+                self.title_h.grid(row=0, column=0, columnspan=5, pady=300, padx=630)
+                self.start_button_h.place(x=600, y=400)
+                self.description_text.grid_remove()
+                self.next_button.grid_remove()
+                for label in self.image_labels:
+                    label.grid_forget()
+                self.step += 1
+        elif self.step == 2:
+            self.title_h.grid_remove()
+            self.start_button_h.place_forget()
             self.display_next_set()
+            self.step += 1
+        elif self.step == 3:
+            if len(self.red_labels) < 2 or len(self.blue_labels) < 2:
+                self.show_error_message("赤と青の枠はそれぞれ二つ選んでください")
+            else:
+                self.update_scores()
+                self.display_next_set()
+            
 
-    def on_left_click(self, label):
+    def on_left_click(self, label, text_label):
         if label in self.red_labels:
             label.config(highlightbackground="white", highlightcolor="white", highlightthickness=7)
+            text_label.lower()  # 非表示にする
             self.red_labels.remove(label)
         else:
             if len(self.red_labels) < 2:
                 if label in self.blue_labels:
                     self.blue_labels.remove(label)
                 label.config(highlightbackground="red", highlightcolor="red", highlightthickness=7)
+                text_label.config(text="魅力的である", bg="red")
+                text_label.lift()  # 表示する
                 self.red_labels.append(label)
             else:
                 self.show_error_message("赤色の枠は二つ以上選べません")
 
-    def on_right_click(self, label):
+    def on_right_click(self, label, text_label):
         if label in self.blue_labels:
             label.config(highlightbackground="white", highlightcolor="white", highlightthickness=7)
+            text_label.lower()  # 非表示にする
             self.blue_labels.remove(label)
         else:
             if len(self.blue_labels) < 2:
                 if label in self.red_labels:
                     self.red_labels.remove(label)
                 label.config(highlightbackground="blue", highlightcolor="blue", highlightthickness=7)
+                text_label.config(text="魅力的でない", bg="blue")
+                text_label.lift()  # 表示する
                 self.blue_labels.append(label)
             else:
                 self.show_error_message("青色の枠は二つ以上選べません")
@@ -243,13 +322,14 @@ class ImageApp:
     
     def show_end_message(self):
         print("Showing end message")  # デバッグ情報
+        self.description_text.grid_remove()
         for label in self.image_labels:
             label.grid_forget()
             print(f"Label {label} hidden")  # デバッグ情報
         end_label = tk.Label(self.root, text="以上で終了します。\nありがとうございました。", font=("Helvetica", 16))
         end_label.grid(row=1, column=1, padx=5, pady=5)
         print("End message displayed")  # デバッグ情報
-        self.next_button.config(state=tk.DISABLED)
+        self.next_button.grid_remove()
         print("Next button disabled")  # デバッグ情報
         self.print_scores()
 
