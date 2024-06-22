@@ -3,7 +3,7 @@ img_title_bowl,DelaGothic,1,0,0,0
 img_title_bowl,DelaGothic,2,0,0,0
 img_title_bowl,DelaGothic,3,0,0,0
 img_title_bowl,DelaGothic,4,0,0,0
-img_title_bowl,DelaGothic,5,0,0,0
+img_title_bowl,DelaGothic,5,0,0,1
 img_title_bowl,DelaGothic,6,0,0,0
 img_title_bowl,DelaGothic,7,0,0,0
 img_title_bowl,DelaGothic,8,0,0,1
@@ -14,9 +14,9 @@ img_title_bowl,DelaGothic,12,0,0,0
 img_title_bowl,DelaGothic,13,0,0,0
 img_title_bowl,DelaGothic,14,0,0,0
 img_title_bowl,DelaGothic,15,0,0,1
-img_title_bowl,DelaGothic,16,0,0,1
+img_title_bowl,DelaGothic,16,0,0,2
 img_title_bowl,DelaGothic,17,0,0,0
-img_title_bowl,DelaGothic,18,0,0,0
+img_title_bowl,DelaGothic,18,1,0,0
 img_title_bowl,DelaGothic,19,0,0,0
 img_title_bowl,DelaGothic,20,0,0,0
 img_title_bowl,DelaGothic,21,0,0,0
@@ -25,7 +25,7 @@ img_title_bowl,DelaGothic,23,0,0,0
 img_title_bowl,DelaGothic,24,0,0,0
 img_title_bowl,DelaGothic,25,0,0,0
 img_title_bowl,DelaGothic,26,0,0,1
-img_title_bowl,DelaGothic,27,0,0,0
+img_title_bowl,DelaGothic,27,0,0,1
 img_title_bowl,DelaGothic,28,0,0,0
 img_title_bowl,DelaGothic,29,0,0,0
 img_title_bowl,DelaGothic,30,0,0,0
@@ -34,7 +34,7 @@ img_title_bowl,DelaGothic,32,0,0,0
 img_title_bowl,DelaGothic,33,0,0,0
 img_title_bowl,DelaGothic,34,0,0,0
 img_title_bowl,DelaGothic,35,0,0,0
-img_title_bowl,DelaGothic,36,0,0,0
+img_title_bowl,DelaGothic,36,0,0,1
 img_title_bowl,DelaGothic,37,0,0,0
 img_title_bowl,DelaGothic,38,0,0,0
 img_title_bowl,DelaGothic,39,0,0,0
@@ -48,7 +48,7 @@ img_title_bowl,DelaGothic,46,0,0,0
 img_title_bowl,DelaGothic,47,0,0,0
 img_title_bowl,DelaGothic,48,0,0,0
 img_title_bowl,DelaGothic,49,0,0,0
-img_title_bowl,DelaGothic,50,0,0,0
+img_title_bowl,DelaGothic,50,0,0,1
 img_title_bowl,DelaGothic,51,0,0,0
 img_title_bowl,DelaGothic,52,0,0,0
 img_title_bowl,DelaGothic,53,0,0,0
@@ -70,7 +70,7 @@ img_title_bowl,DelaGothic,68,0,0,0
 img_title_bowl,DelaGothic,69,0,0,0
 img_title_bowl,DelaGothic,70,0,0,0
 img_title_bowl,DelaGothic,71,0,0,1
-img_title_bowl,DelaGothic,72,0,0,0
+img_title_bowl,DelaGothic,72,0,0,1
 img_title_bowl,DelaGothic,73,0,0,0
 img_title_bowl,DelaGothic,74,0,0,0
 img_title_bowl,DelaGothic,75,0,0,0
@@ -81,10 +81,10 @@ img_title_bowl,DelaGothic,79,0,0,0
 img_title_bowl,DelaGothic,80,0,0,0
 img_title_bowl,DelaGothic,81,0,0,1
 img_title_bowl,DelaGothic,82,0,0,1
-img_title_bowl,DelaGothic,83,0,0,0
-img_title_bowl,DelaGothic,84,0,0,0
+img_title_bowl,DelaGothic,83,1,0,0
+img_title_bowl,DelaGothic,84,0,0,1
 img_title_bowl,DelaGothic,85,1,0,0
-img_title_bowl,DelaGothic,86,0,0,0
+img_title_bowl,DelaGothic,86,0,0,1
 img_title_bowl,DelaGothic,87,0,0,0
 img_title_bowl,DelaGothic,88,1,0,0
 img_title_bowl,DelaGothic,89,0,0,0
@@ -103,7 +103,7 @@ img_title_bowl,HachiMaruPop,1,0,0,0
 img_title_bowl,HachiMaruPop,2,0,0,0
 img_title_bowl,HachiMaruPop,3,0,0,0
 img_title_bowl,HachiMaruPop,4,0,0,0
-img_title_bowl,HachiMaruPop,5,0,0,0
+img_title_bowl,HachiMaruPop,5,1,0,0
 img_title_bowl,HachiMaruPop,6,0,0,0
 img_title_bowl,HachiMaruPop,7,0,0,0
 img_title_bowl,HachiMaruPop,8,0,0,1
@@ -114,9 +114,9 @@ img_title_bowl,HachiMaruPop,12,0,0,0
 img_title_bowl,HachiMaruPop,13,0,0,0
 img_title_bowl,HachiMaruPop,14,0,0,0
 img_title_bowl,HachiMaruPop,15,0,0,1
-img_title_bowl,HachiMaruPop,16,0,0,1
+img_title_bowl,HachiMaruPop,16,0,0,2
 img_title_bowl,HachiMaruPop,17,0,0,0
-img_title_bowl,HachiMaruPop,18,0,0,0
+img_title_bowl,HachiMaruPop,18,0,0,1
 img_title_bowl,HachiMaruPop,19,0,0,0
 img_title_bowl,HachiMaruPop,20,0,0,0
 img_title_bowl,HachiMaruPop,21,0,0,0
@@ -125,7 +125,7 @@ img_title_bowl,HachiMaruPop,23,0,0,0
 img_title_bowl,HachiMaruPop,24,0,0,0
 img_title_bowl,HachiMaruPop,25,0,0,0
 img_title_bowl,HachiMaruPop,26,0,0,1
-img_title_bowl,HachiMaruPop,27,0,0,0
+img_title_bowl,HachiMaruPop,27,0,0,1
 img_title_bowl,HachiMaruPop,28,0,0,0
 img_title_bowl,HachiMaruPop,29,0,0,0
 img_title_bowl,HachiMaruPop,30,0,0,0
@@ -134,7 +134,7 @@ img_title_bowl,HachiMaruPop,32,0,0,0
 img_title_bowl,HachiMaruPop,33,0,0,0
 img_title_bowl,HachiMaruPop,34,0,0,0
 img_title_bowl,HachiMaruPop,35,0,0,0
-img_title_bowl,HachiMaruPop,36,0,0,0
+img_title_bowl,HachiMaruPop,36,0,0,1
 img_title_bowl,HachiMaruPop,37,0,0,0
 img_title_bowl,HachiMaruPop,38,0,0,0
 img_title_bowl,HachiMaruPop,39,0,0,0
@@ -148,7 +148,7 @@ img_title_bowl,HachiMaruPop,46,0,0,0
 img_title_bowl,HachiMaruPop,47,0,0,0
 img_title_bowl,HachiMaruPop,48,0,0,0
 img_title_bowl,HachiMaruPop,49,0,0,0
-img_title_bowl,HachiMaruPop,50,0,0,0
+img_title_bowl,HachiMaruPop,50,0,0,1
 img_title_bowl,HachiMaruPop,51,0,0,0
 img_title_bowl,HachiMaruPop,52,0,0,0
 img_title_bowl,HachiMaruPop,53,0,0,0
@@ -170,7 +170,7 @@ img_title_bowl,HachiMaruPop,68,0,0,0
 img_title_bowl,HachiMaruPop,69,0,0,0
 img_title_bowl,HachiMaruPop,70,0,0,0
 img_title_bowl,HachiMaruPop,71,0,0,1
-img_title_bowl,HachiMaruPop,72,0,0,0
+img_title_bowl,HachiMaruPop,72,0,0,1
 img_title_bowl,HachiMaruPop,73,0,0,0
 img_title_bowl,HachiMaruPop,74,0,0,0
 img_title_bowl,HachiMaruPop,75,0,0,0
@@ -181,10 +181,10 @@ img_title_bowl,HachiMaruPop,79,0,0,0
 img_title_bowl,HachiMaruPop,80,0,0,0
 img_title_bowl,HachiMaruPop,81,0,0,1
 img_title_bowl,HachiMaruPop,82,0,0,1
-img_title_bowl,HachiMaruPop,83,0,0,0
-img_title_bowl,HachiMaruPop,84,0,0,0
+img_title_bowl,HachiMaruPop,83,1,0,0
+img_title_bowl,HachiMaruPop,84,0,0,1
 img_title_bowl,HachiMaruPop,85,1,0,0
-img_title_bowl,HachiMaruPop,86,0,0,0
+img_title_bowl,HachiMaruPop,86,0,0,1
 img_title_bowl,HachiMaruPop,87,0,0,0
 img_title_bowl,HachiMaruPop,88,1,0,0
 img_title_bowl,HachiMaruPop,89,0,0,0
@@ -203,7 +203,7 @@ img_title_bowl,KaiseiDecol,1,0,0,0
 img_title_bowl,KaiseiDecol,2,0,0,0
 img_title_bowl,KaiseiDecol,3,0,0,0
 img_title_bowl,KaiseiDecol,4,0,0,0
-img_title_bowl,KaiseiDecol,5,0,0,0
+img_title_bowl,KaiseiDecol,5,1,0,0
 img_title_bowl,KaiseiDecol,6,0,0,0
 img_title_bowl,KaiseiDecol,7,0,0,0
 img_title_bowl,KaiseiDecol,8,0,0,0
@@ -214,9 +214,9 @@ img_title_bowl,KaiseiDecol,12,0,0,0
 img_title_bowl,KaiseiDecol,13,0,0,0
 img_title_bowl,KaiseiDecol,14,0,0,0
 img_title_bowl,KaiseiDecol,15,0,0,0
-img_title_bowl,KaiseiDecol,16,1,0,0
+img_title_bowl,KaiseiDecol,16,2,0,0
 img_title_bowl,KaiseiDecol,17,0,0,0
-img_title_bowl,KaiseiDecol,18,0,0,0
+img_title_bowl,KaiseiDecol,18,0,0,1
 img_title_bowl,KaiseiDecol,19,0,0,0
 img_title_bowl,KaiseiDecol,20,0,0,0
 img_title_bowl,KaiseiDecol,21,0,0,0
@@ -225,7 +225,7 @@ img_title_bowl,KaiseiDecol,23,0,0,0
 img_title_bowl,KaiseiDecol,24,0,0,0
 img_title_bowl,KaiseiDecol,25,0,0,0
 img_title_bowl,KaiseiDecol,26,1,0,0
-img_title_bowl,KaiseiDecol,27,0,0,0
+img_title_bowl,KaiseiDecol,27,1,0,0
 img_title_bowl,KaiseiDecol,28,0,0,0
 img_title_bowl,KaiseiDecol,29,0,0,0
 img_title_bowl,KaiseiDecol,30,0,0,0
@@ -234,7 +234,7 @@ img_title_bowl,KaiseiDecol,32,0,0,0
 img_title_bowl,KaiseiDecol,33,0,0,0
 img_title_bowl,KaiseiDecol,34,0,0,0
 img_title_bowl,KaiseiDecol,35,0,0,0
-img_title_bowl,KaiseiDecol,36,0,0,0
+img_title_bowl,KaiseiDecol,36,1,0,0
 img_title_bowl,KaiseiDecol,37,0,0,0
 img_title_bowl,KaiseiDecol,38,0,0,0
 img_title_bowl,KaiseiDecol,39,0,0,0
@@ -248,7 +248,7 @@ img_title_bowl,KaiseiDecol,46,0,0,0
 img_title_bowl,KaiseiDecol,47,0,0,0
 img_title_bowl,KaiseiDecol,48,0,0,0
 img_title_bowl,KaiseiDecol,49,0,0,0
-img_title_bowl,KaiseiDecol,50,0,0,0
+img_title_bowl,KaiseiDecol,50,1,0,0
 img_title_bowl,KaiseiDecol,51,0,0,0
 img_title_bowl,KaiseiDecol,52,0,0,0
 img_title_bowl,KaiseiDecol,53,0,0,0
@@ -270,7 +270,7 @@ img_title_bowl,KaiseiDecol,68,0,0,0
 img_title_bowl,KaiseiDecol,69,0,0,0
 img_title_bowl,KaiseiDecol,70,0,0,0
 img_title_bowl,KaiseiDecol,71,1,0,0
-img_title_bowl,KaiseiDecol,72,0,0,0
+img_title_bowl,KaiseiDecol,72,1,0,0
 img_title_bowl,KaiseiDecol,73,0,0,0
 img_title_bowl,KaiseiDecol,74,0,0,0
 img_title_bowl,KaiseiDecol,75,0,0,0
@@ -281,10 +281,10 @@ img_title_bowl,KaiseiDecol,79,0,0,0
 img_title_bowl,KaiseiDecol,80,0,0,0
 img_title_bowl,KaiseiDecol,81,1,0,0
 img_title_bowl,KaiseiDecol,82,1,0,0
-img_title_bowl,KaiseiDecol,83,0,0,0
-img_title_bowl,KaiseiDecol,84,0,0,0
+img_title_bowl,KaiseiDecol,83,0,0,1
+img_title_bowl,KaiseiDecol,84,1,0,0
 img_title_bowl,KaiseiDecol,85,0,0,1
-img_title_bowl,KaiseiDecol,86,0,0,0
+img_title_bowl,KaiseiDecol,86,1,0,0
 img_title_bowl,KaiseiDecol,87,0,0,0
 img_title_bowl,KaiseiDecol,88,0,0,1
 img_title_bowl,KaiseiDecol,89,0,0,0
@@ -303,7 +303,7 @@ img_title_bowl,NotoSansJP,1,0,0,0
 img_title_bowl,NotoSansJP,2,0,0,0
 img_title_bowl,NotoSansJP,3,0,0,0
 img_title_bowl,NotoSansJP,4,0,0,0
-img_title_bowl,NotoSansJP,5,0,0,0
+img_title_bowl,NotoSansJP,5,0,0,1
 img_title_bowl,NotoSansJP,6,0,0,0
 img_title_bowl,NotoSansJP,7,0,0,0
 img_title_bowl,NotoSansJP,8,0,0,0
@@ -314,9 +314,9 @@ img_title_bowl,NotoSansJP,12,0,0,0
 img_title_bowl,NotoSansJP,13,0,0,0
 img_title_bowl,NotoSansJP,14,0,0,0
 img_title_bowl,NotoSansJP,15,0,0,0
-img_title_bowl,NotoSansJP,16,1,0,0
+img_title_bowl,NotoSansJP,16,2,0,0
 img_title_bowl,NotoSansJP,17,0,0,0
-img_title_bowl,NotoSansJP,18,0,0,0
+img_title_bowl,NotoSansJP,18,1,0,0
 img_title_bowl,NotoSansJP,19,0,0,0
 img_title_bowl,NotoSansJP,20,0,0,0
 img_title_bowl,NotoSansJP,21,0,0,0
@@ -325,7 +325,7 @@ img_title_bowl,NotoSansJP,23,0,0,0
 img_title_bowl,NotoSansJP,24,0,0,0
 img_title_bowl,NotoSansJP,25,0,0,0
 img_title_bowl,NotoSansJP,26,1,0,0
-img_title_bowl,NotoSansJP,27,0,0,0
+img_title_bowl,NotoSansJP,27,1,0,0
 img_title_bowl,NotoSansJP,28,0,0,0
 img_title_bowl,NotoSansJP,29,0,0,0
 img_title_bowl,NotoSansJP,30,0,0,0
@@ -334,7 +334,7 @@ img_title_bowl,NotoSansJP,32,0,0,0
 img_title_bowl,NotoSansJP,33,0,0,0
 img_title_bowl,NotoSansJP,34,0,0,0
 img_title_bowl,NotoSansJP,35,0,0,0
-img_title_bowl,NotoSansJP,36,0,0,0
+img_title_bowl,NotoSansJP,36,1,0,0
 img_title_bowl,NotoSansJP,37,0,0,0
 img_title_bowl,NotoSansJP,38,0,0,0
 img_title_bowl,NotoSansJP,39,0,0,0
@@ -348,7 +348,7 @@ img_title_bowl,NotoSansJP,46,0,0,0
 img_title_bowl,NotoSansJP,47,0,0,0
 img_title_bowl,NotoSansJP,48,0,0,0
 img_title_bowl,NotoSansJP,49,0,0,0
-img_title_bowl,NotoSansJP,50,0,0,0
+img_title_bowl,NotoSansJP,50,1,0,0
 img_title_bowl,NotoSansJP,51,0,0,0
 img_title_bowl,NotoSansJP,52,0,0,0
 img_title_bowl,NotoSansJP,53,0,0,0
@@ -370,7 +370,7 @@ img_title_bowl,NotoSansJP,68,0,0,0
 img_title_bowl,NotoSansJP,69,0,0,0
 img_title_bowl,NotoSansJP,70,0,0,0
 img_title_bowl,NotoSansJP,71,1,0,0
-img_title_bowl,NotoSansJP,72,0,0,0
+img_title_bowl,NotoSansJP,72,1,0,0
 img_title_bowl,NotoSansJP,73,0,0,0
 img_title_bowl,NotoSansJP,74,0,0,0
 img_title_bowl,NotoSansJP,75,0,0,0
@@ -381,10 +381,10 @@ img_title_bowl,NotoSansJP,79,0,0,0
 img_title_bowl,NotoSansJP,80,0,0,0
 img_title_bowl,NotoSansJP,81,1,0,0
 img_title_bowl,NotoSansJP,82,1,0,0
-img_title_bowl,NotoSansJP,83,0,0,0
-img_title_bowl,NotoSansJP,84,0,0,0
+img_title_bowl,NotoSansJP,83,0,0,1
+img_title_bowl,NotoSansJP,84,1,0,0
 img_title_bowl,NotoSansJP,85,0,0,1
-img_title_bowl,NotoSansJP,86,0,0,0
+img_title_bowl,NotoSansJP,86,1,0,0
 img_title_bowl,NotoSansJP,87,0,0,0
 img_title_bowl,NotoSansJP,88,0,0,1
 img_title_bowl,NotoSansJP,89,0,0,0
@@ -403,7 +403,7 @@ img_title_bowl,NotoSerif,1,0,0,0
 img_title_bowl,NotoSerif,2,0,0,0
 img_title_bowl,NotoSerif,3,0,0,0
 img_title_bowl,NotoSerif,4,0,0,0
-img_title_bowl,NotoSerif,5,0,0,0
+img_title_bowl,NotoSerif,5,0,1,0
 img_title_bowl,NotoSerif,6,0,0,0
 img_title_bowl,NotoSerif,7,0,0,0
 img_title_bowl,NotoSerif,8,0,0,0
@@ -414,9 +414,9 @@ img_title_bowl,NotoSerif,12,0,0,0
 img_title_bowl,NotoSerif,13,0,0,0
 img_title_bowl,NotoSerif,14,0,0,0
 img_title_bowl,NotoSerif,15,0,0,0
-img_title_bowl,NotoSerif,16,0,1,0
+img_title_bowl,NotoSerif,16,0,2,0
 img_title_bowl,NotoSerif,17,0,0,0
-img_title_bowl,NotoSerif,18,0,0,0
+img_title_bowl,NotoSerif,18,0,1,0
 img_title_bowl,NotoSerif,19,0,0,0
 img_title_bowl,NotoSerif,20,0,0,0
 img_title_bowl,NotoSerif,21,0,0,0
@@ -425,7 +425,7 @@ img_title_bowl,NotoSerif,23,0,0,0
 img_title_bowl,NotoSerif,24,0,0,0
 img_title_bowl,NotoSerif,25,0,0,0
 img_title_bowl,NotoSerif,26,0,1,0
-img_title_bowl,NotoSerif,27,0,0,0
+img_title_bowl,NotoSerif,27,0,1,0
 img_title_bowl,NotoSerif,28,0,0,0
 img_title_bowl,NotoSerif,29,0,0,0
 img_title_bowl,NotoSerif,30,0,0,0
@@ -434,7 +434,7 @@ img_title_bowl,NotoSerif,32,0,0,0
 img_title_bowl,NotoSerif,33,0,0,0
 img_title_bowl,NotoSerif,34,0,0,0
 img_title_bowl,NotoSerif,35,0,0,0
-img_title_bowl,NotoSerif,36,0,0,0
+img_title_bowl,NotoSerif,36,0,1,0
 img_title_bowl,NotoSerif,37,0,0,0
 img_title_bowl,NotoSerif,38,0,0,0
 img_title_bowl,NotoSerif,39,0,0,0
@@ -448,7 +448,7 @@ img_title_bowl,NotoSerif,46,0,0,0
 img_title_bowl,NotoSerif,47,0,0,0
 img_title_bowl,NotoSerif,48,0,0,0
 img_title_bowl,NotoSerif,49,0,0,0
-img_title_bowl,NotoSerif,50,0,0,0
+img_title_bowl,NotoSerif,50,0,1,0
 img_title_bowl,NotoSerif,51,0,0,0
 img_title_bowl,NotoSerif,52,0,0,0
 img_title_bowl,NotoSerif,53,0,0,0
@@ -470,7 +470,7 @@ img_title_bowl,NotoSerif,68,0,0,0
 img_title_bowl,NotoSerif,69,0,0,0
 img_title_bowl,NotoSerif,70,0,0,0
 img_title_bowl,NotoSerif,71,0,1,0
-img_title_bowl,NotoSerif,72,0,0,0
+img_title_bowl,NotoSerif,72,0,1,0
 img_title_bowl,NotoSerif,73,0,0,0
 img_title_bowl,NotoSerif,74,0,0,0
 img_title_bowl,NotoSerif,75,0,0,0
@@ -481,10 +481,10 @@ img_title_bowl,NotoSerif,79,0,0,0
 img_title_bowl,NotoSerif,80,0,0,0
 img_title_bowl,NotoSerif,81,0,1,0
 img_title_bowl,NotoSerif,82,0,1,0
-img_title_bowl,NotoSerif,83,0,0,0
-img_title_bowl,NotoSerif,84,0,0,0
+img_title_bowl,NotoSerif,83,0,1,0
+img_title_bowl,NotoSerif,84,0,1,0
 img_title_bowl,NotoSerif,85,0,1,0
-img_title_bowl,NotoSerif,86,0,0,0
+img_title_bowl,NotoSerif,86,0,1,0
 img_title_bowl,NotoSerif,87,0,0,0
 img_title_bowl,NotoSerif,88,0,1,0
 img_title_bowl,NotoSerif,89,0,0,0
@@ -503,7 +503,7 @@ img_title_bowl,Reggae,1,0,0,0
 img_title_bowl,Reggae,2,0,0,0
 img_title_bowl,Reggae,3,0,0,0
 img_title_bowl,Reggae,4,0,0,0
-img_title_bowl,Reggae,5,0,0,0
+img_title_bowl,Reggae,5,0,1,0
 img_title_bowl,Reggae,6,0,0,0
 img_title_bowl,Reggae,7,0,0,0
 img_title_bowl,Reggae,8,0,0,0
@@ -514,9 +514,9 @@ img_title_bowl,Reggae,12,0,0,0
 img_title_bowl,Reggae,13,0,0,0
 img_title_bowl,Reggae,14,0,0,0
 img_title_bowl,Reggae,15,0,0,0
-img_title_bowl,Reggae,16,0,1,0
+img_title_bowl,Reggae,16,0,2,0
 img_title_bowl,Reggae,17,0,0,0
-img_title_bowl,Reggae,18,0,0,0
+img_title_bowl,Reggae,18,0,1,0
 img_title_bowl,Reggae,19,0,0,0
 img_title_bowl,Reggae,20,0,0,0
 img_title_bowl,Reggae,21,0,0,0
@@ -525,7 +525,7 @@ img_title_bowl,Reggae,23,0,0,0
 img_title_bowl,Reggae,24,0,0,0
 img_title_bowl,Reggae,25,0,0,0
 img_title_bowl,Reggae,26,0,1,0
-img_title_bowl,Reggae,27,0,0,0
+img_title_bowl,Reggae,27,0,1,0
 img_title_bowl,Reggae,28,0,0,0
 img_title_bowl,Reggae,29,0,0,0
 img_title_bowl,Reggae,30,0,0,0
@@ -534,7 +534,7 @@ img_title_bowl,Reggae,32,0,0,0
 img_title_bowl,Reggae,33,0,0,0
 img_title_bowl,Reggae,34,0,0,0
 img_title_bowl,Reggae,35,0,0,0
-img_title_bowl,Reggae,36,0,0,0
+img_title_bowl,Reggae,36,0,1,0
 img_title_bowl,Reggae,37,0,0,0
 img_title_bowl,Reggae,38,0,0,0
 img_title_bowl,Reggae,39,0,0,0
@@ -548,7 +548,7 @@ img_title_bowl,Reggae,46,0,0,0
 img_title_bowl,Reggae,47,0,0,0
 img_title_bowl,Reggae,48,0,0,0
 img_title_bowl,Reggae,49,0,0,0
-img_title_bowl,Reggae,50,0,0,0
+img_title_bowl,Reggae,50,0,1,0
 img_title_bowl,Reggae,51,0,0,0
 img_title_bowl,Reggae,52,0,0,0
 img_title_bowl,Reggae,53,0,0,0
@@ -570,7 +570,7 @@ img_title_bowl,Reggae,68,0,0,0
 img_title_bowl,Reggae,69,0,0,0
 img_title_bowl,Reggae,70,0,0,0
 img_title_bowl,Reggae,71,0,1,0
-img_title_bowl,Reggae,72,0,0,0
+img_title_bowl,Reggae,72,0,1,0
 img_title_bowl,Reggae,73,0,0,0
 img_title_bowl,Reggae,74,0,0,0
 img_title_bowl,Reggae,75,0,0,0
@@ -581,10 +581,10 @@ img_title_bowl,Reggae,79,0,0,0
 img_title_bowl,Reggae,80,0,0,0
 img_title_bowl,Reggae,81,0,1,0
 img_title_bowl,Reggae,82,0,1,0
-img_title_bowl,Reggae,83,0,0,0
-img_title_bowl,Reggae,84,0,0,0
+img_title_bowl,Reggae,83,0,1,0
+img_title_bowl,Reggae,84,0,1,0
 img_title_bowl,Reggae,85,0,1,0
-img_title_bowl,Reggae,86,0,0,0
+img_title_bowl,Reggae,86,0,1,0
 img_title_bowl,Reggae,87,0,0,0
 img_title_bowl,Reggae,88,0,1,0
 img_title_bowl,Reggae,89,0,0,0
@@ -603,7 +603,7 @@ img_title_bowl,Stick,1,0,0,0
 img_title_bowl,Stick,2,0,0,0
 img_title_bowl,Stick,3,0,0,0
 img_title_bowl,Stick,4,0,0,0
-img_title_bowl,Stick,5,0,0,0
+img_title_bowl,Stick,5,0,1,0
 img_title_bowl,Stick,6,0,0,0
 img_title_bowl,Stick,7,0,0,0
 img_title_bowl,Stick,8,0,0,0
@@ -614,9 +614,9 @@ img_title_bowl,Stick,12,0,0,0
 img_title_bowl,Stick,13,0,0,0
 img_title_bowl,Stick,14,0,0,0
 img_title_bowl,Stick,15,0,0,0
-img_title_bowl,Stick,16,0,1,0
+img_title_bowl,Stick,16,0,2,0
 img_title_bowl,Stick,17,0,0,0
-img_title_bowl,Stick,18,0,0,0
+img_title_bowl,Stick,18,0,1,0
 img_title_bowl,Stick,19,0,0,0
 img_title_bowl,Stick,20,0,0,0
 img_title_bowl,Stick,21,0,0,0
@@ -625,7 +625,7 @@ img_title_bowl,Stick,23,0,0,0
 img_title_bowl,Stick,24,0,0,0
 img_title_bowl,Stick,25,0,0,0
 img_title_bowl,Stick,26,0,1,0
-img_title_bowl,Stick,27,0,0,0
+img_title_bowl,Stick,27,0,1,0
 img_title_bowl,Stick,28,0,0,0
 img_title_bowl,Stick,29,0,0,0
 img_title_bowl,Stick,30,0,0,0
@@ -634,7 +634,7 @@ img_title_bowl,Stick,32,0,0,0
 img_title_bowl,Stick,33,0,0,0
 img_title_bowl,Stick,34,0,0,0
 img_title_bowl,Stick,35,0,0,0
-img_title_bowl,Stick,36,0,0,0
+img_title_bowl,Stick,36,0,1,0
 img_title_bowl,Stick,37,0,0,0
 img_title_bowl,Stick,38,0,0,0
 img_title_bowl,Stick,39,0,0,0
@@ -648,7 +648,7 @@ img_title_bowl,Stick,46,0,0,0
 img_title_bowl,Stick,47,0,0,0
 img_title_bowl,Stick,48,0,0,0
 img_title_bowl,Stick,49,0,0,0
-img_title_bowl,Stick,50,0,0,0
+img_title_bowl,Stick,50,0,1,0
 img_title_bowl,Stick,51,0,0,0
 img_title_bowl,Stick,52,0,0,0
 img_title_bowl,Stick,53,0,0,0
@@ -670,7 +670,7 @@ img_title_bowl,Stick,68,0,0,0
 img_title_bowl,Stick,69,0,0,0
 img_title_bowl,Stick,70,0,0,0
 img_title_bowl,Stick,71,0,1,0
-img_title_bowl,Stick,72,0,0,0
+img_title_bowl,Stick,72,0,1,0
 img_title_bowl,Stick,73,0,0,0
 img_title_bowl,Stick,74,0,0,0
 img_title_bowl,Stick,75,0,0,0
@@ -681,10 +681,10 @@ img_title_bowl,Stick,79,0,0,0
 img_title_bowl,Stick,80,0,0,0
 img_title_bowl,Stick,81,0,1,0
 img_title_bowl,Stick,82,0,1,0
-img_title_bowl,Stick,83,0,0,0
-img_title_bowl,Stick,84,0,0,0
+img_title_bowl,Stick,83,0,1,0
+img_title_bowl,Stick,84,0,1,0
 img_title_bowl,Stick,85,0,1,0
-img_title_bowl,Stick,86,0,0,0
+img_title_bowl,Stick,86,0,1,0
 img_title_bowl,Stick,87,0,0,0
 img_title_bowl,Stick,88,0,1,0
 img_title_bowl,Stick,89,0,0,0
@@ -699,7 +699,7 @@ img_title_bowl,Stick,97,0,0,0
 img_title_bowl,Stick,98,0,0,0
 img_title_bowl,Stick,99,0,0,0
 img_title_bowl,Stick,100,0,0,0
-img_title_omret,DelaGothic,1,0,0,0
+img_title_omret,DelaGothic,1,1,0,0
 img_title_omret,DelaGothic,2,0,0,0
 img_title_omret,DelaGothic,3,0,0,0
 img_title_omret,DelaGothic,4,0,0,0
@@ -752,7 +752,7 @@ img_title_omret,DelaGothic,50,0,0,0
 img_title_omret,DelaGothic,51,0,0,0
 img_title_omret,DelaGothic,52,0,0,0
 img_title_omret,DelaGothic,53,0,0,0
-img_title_omret,DelaGothic,54,0,0,0
+img_title_omret,DelaGothic,54,1,0,0
 img_title_omret,DelaGothic,55,0,0,0
 img_title_omret,DelaGothic,56,0,0,0
 img_title_omret,DelaGothic,57,0,0,0
@@ -782,7 +782,7 @@ img_title_omret,DelaGothic,80,0,0,0
 img_title_omret,DelaGothic,81,0,0,0
 img_title_omret,DelaGothic,82,0,0,0
 img_title_omret,DelaGothic,83,0,0,0
-img_title_omret,DelaGothic,84,0,0,0
+img_title_omret,DelaGothic,84,1,0,0
 img_title_omret,DelaGothic,85,0,0,0
 img_title_omret,DelaGothic,86,0,0,0
 img_title_omret,DelaGothic,87,0,0,0
@@ -799,7 +799,7 @@ img_title_omret,DelaGothic,97,0,0,0
 img_title_omret,DelaGothic,98,0,0,0
 img_title_omret,DelaGothic,99,0,0,0
 img_title_omret,DelaGothic,100,0,0,0
-img_title_omret,HachiMaruPop,1,0,0,0
+img_title_omret,HachiMaruPop,1,1,0,0
 img_title_omret,HachiMaruPop,2,0,0,0
 img_title_omret,HachiMaruPop,3,0,0,0
 img_title_omret,HachiMaruPop,4,0,0,0
@@ -852,7 +852,7 @@ img_title_omret,HachiMaruPop,50,0,0,0
 img_title_omret,HachiMaruPop,51,0,0,0
 img_title_omret,HachiMaruPop,52,0,0,0
 img_title_omret,HachiMaruPop,53,0,0,0
-img_title_omret,HachiMaruPop,54,0,0,0
+img_title_omret,HachiMaruPop,54,1,0,0
 img_title_omret,HachiMaruPop,55,0,0,0
 img_title_omret,HachiMaruPop,56,0,0,0
 img_title_omret,HachiMaruPop,57,0,0,0
@@ -882,7 +882,7 @@ img_title_omret,HachiMaruPop,80,0,0,0
 img_title_omret,HachiMaruPop,81,0,0,0
 img_title_omret,HachiMaruPop,82,0,0,0
 img_title_omret,HachiMaruPop,83,0,0,0
-img_title_omret,HachiMaruPop,84,0,0,0
+img_title_omret,HachiMaruPop,84,1,0,0
 img_title_omret,HachiMaruPop,85,0,0,0
 img_title_omret,HachiMaruPop,86,0,0,0
 img_title_omret,HachiMaruPop,87,0,0,0
@@ -899,7 +899,7 @@ img_title_omret,HachiMaruPop,97,0,0,0
 img_title_omret,HachiMaruPop,98,0,0,0
 img_title_omret,HachiMaruPop,99,0,0,0
 img_title_omret,HachiMaruPop,100,0,0,0
-img_title_omret,KaiseiDecol,1,0,0,0
+img_title_omret,KaiseiDecol,1,0,0,1
 img_title_omret,KaiseiDecol,2,0,0,0
 img_title_omret,KaiseiDecol,3,0,0,0
 img_title_omret,KaiseiDecol,4,0,0,0
@@ -952,7 +952,7 @@ img_title_omret,KaiseiDecol,50,0,0,0
 img_title_omret,KaiseiDecol,51,0,0,0
 img_title_omret,KaiseiDecol,52,0,0,0
 img_title_omret,KaiseiDecol,53,0,0,0
-img_title_omret,KaiseiDecol,54,0,0,0
+img_title_omret,KaiseiDecol,54,0,0,1
 img_title_omret,KaiseiDecol,55,0,0,0
 img_title_omret,KaiseiDecol,56,0,0,0
 img_title_omret,KaiseiDecol,57,0,0,0
@@ -982,7 +982,7 @@ img_title_omret,KaiseiDecol,80,0,0,0
 img_title_omret,KaiseiDecol,81,0,0,0
 img_title_omret,KaiseiDecol,82,0,0,0
 img_title_omret,KaiseiDecol,83,0,0,0
-img_title_omret,KaiseiDecol,84,0,0,0
+img_title_omret,KaiseiDecol,84,0,0,1
 img_title_omret,KaiseiDecol,85,0,0,0
 img_title_omret,KaiseiDecol,86,0,0,0
 img_title_omret,KaiseiDecol,87,0,0,0
@@ -999,7 +999,7 @@ img_title_omret,KaiseiDecol,97,0,0,0
 img_title_omret,KaiseiDecol,98,0,0,0
 img_title_omret,KaiseiDecol,99,0,0,0
 img_title_omret,KaiseiDecol,100,0,0,0
-img_title_omret,NotoSansJP,1,0,0,0
+img_title_omret,NotoSansJP,1,0,0,1
 img_title_omret,NotoSansJP,2,0,0,0
 img_title_omret,NotoSansJP,3,0,0,0
 img_title_omret,NotoSansJP,4,0,0,0
@@ -1052,7 +1052,7 @@ img_title_omret,NotoSansJP,50,0,0,0
 img_title_omret,NotoSansJP,51,0,0,0
 img_title_omret,NotoSansJP,52,0,0,0
 img_title_omret,NotoSansJP,53,0,0,0
-img_title_omret,NotoSansJP,54,0,0,0
+img_title_omret,NotoSansJP,54,0,0,1
 img_title_omret,NotoSansJP,55,0,0,0
 img_title_omret,NotoSansJP,56,0,0,0
 img_title_omret,NotoSansJP,57,0,0,0
@@ -1082,7 +1082,7 @@ img_title_omret,NotoSansJP,80,0,0,0
 img_title_omret,NotoSansJP,81,0,0,0
 img_title_omret,NotoSansJP,82,0,0,0
 img_title_omret,NotoSansJP,83,0,0,0
-img_title_omret,NotoSansJP,84,0,0,0
+img_title_omret,NotoSansJP,84,0,0,1
 img_title_omret,NotoSansJP,85,0,0,0
 img_title_omret,NotoSansJP,86,0,0,0
 img_title_omret,NotoSansJP,87,0,0,0
@@ -1152,7 +1152,7 @@ img_title_omret,NotoSerif,50,0,0,0
 img_title_omret,NotoSerif,51,0,0,0
 img_title_omret,NotoSerif,52,0,0,0
 img_title_omret,NotoSerif,53,0,0,0
-img_title_omret,NotoSerif,54,0,0,0
+img_title_omret,NotoSerif,54,0,1,0
 img_title_omret,NotoSerif,55,0,0,0
 img_title_omret,NotoSerif,56,0,0,0
 img_title_omret,NotoSerif,57,0,0,0
@@ -1252,7 +1252,7 @@ img_title_omret,Reggae,50,0,0,0
 img_title_omret,Reggae,51,0,0,0
 img_title_omret,Reggae,52,0,0,0
 img_title_omret,Reggae,53,0,0,0
-img_title_omret,Reggae,54,0,0,0
+img_title_omret,Reggae,54,0,1,0
 img_title_omret,Reggae,55,0,0,0
 img_title_omret,Reggae,56,0,0,0
 img_title_omret,Reggae,57,0,0,0
@@ -1352,7 +1352,7 @@ img_title_omret,Stick,50,0,0,0
 img_title_omret,Stick,51,0,0,0
 img_title_omret,Stick,52,0,0,0
 img_title_omret,Stick,53,0,0,0
-img_title_omret,Stick,54,0,0,0
+img_title_omret,Stick,54,0,1,0
 img_title_omret,Stick,55,0,0,0
 img_title_omret,Stick,56,0,0,0
 img_title_omret,Stick,57,0,0,0
@@ -1405,7 +1405,7 @@ img_title_pasta,DelaGothic,3,0,0,0
 img_title_pasta,DelaGothic,4,0,0,0
 img_title_pasta,DelaGothic,5,0,0,0
 img_title_pasta,DelaGothic,6,0,0,0
-img_title_pasta,DelaGothic,7,0,0,0
+img_title_pasta,DelaGothic,7,1,0,0
 img_title_pasta,DelaGothic,8,0,0,0
 img_title_pasta,DelaGothic,9,0,0,0
 img_title_pasta,DelaGothic,10,0,0,0
@@ -1471,14 +1471,14 @@ img_title_pasta,DelaGothic,69,0,0,0
 img_title_pasta,DelaGothic,70,0,0,0
 img_title_pasta,DelaGothic,71,0,0,0
 img_title_pasta,DelaGothic,72,0,0,0
-img_title_pasta,DelaGothic,73,0,0,0
+img_title_pasta,DelaGothic,73,0,0,1
 img_title_pasta,DelaGothic,74,0,0,0
 img_title_pasta,DelaGothic,75,0,0,0
 img_title_pasta,DelaGothic,76,0,0,0
 img_title_pasta,DelaGothic,77,0,0,0
 img_title_pasta,DelaGothic,78,0,0,0
 img_title_pasta,DelaGothic,79,0,0,0
-img_title_pasta,DelaGothic,80,0,0,0
+img_title_pasta,DelaGothic,80,0,0,1
 img_title_pasta,DelaGothic,81,0,0,0
 img_title_pasta,DelaGothic,82,0,0,0
 img_title_pasta,DelaGothic,83,0,0,0
@@ -1486,14 +1486,14 @@ img_title_pasta,DelaGothic,84,0,0,0
 img_title_pasta,DelaGothic,85,0,0,0
 img_title_pasta,DelaGothic,86,0,0,0
 img_title_pasta,DelaGothic,87,0,0,0
-img_title_pasta,DelaGothic,88,0,0,0
+img_title_pasta,DelaGothic,88,0,0,1
 img_title_pasta,DelaGothic,89,0,0,0
 img_title_pasta,DelaGothic,90,0,0,0
 img_title_pasta,DelaGothic,91,0,0,0
 img_title_pasta,DelaGothic,92,0,0,0
 img_title_pasta,DelaGothic,93,0,0,0
 img_title_pasta,DelaGothic,94,0,0,0
-img_title_pasta,DelaGothic,95,0,0,0
+img_title_pasta,DelaGothic,95,1,0,0
 img_title_pasta,DelaGothic,96,0,0,0
 img_title_pasta,DelaGothic,97,0,0,0
 img_title_pasta,DelaGothic,98,0,0,0
@@ -1505,7 +1505,7 @@ img_title_pasta,HachiMaruPop,3,0,0,0
 img_title_pasta,HachiMaruPop,4,0,0,0
 img_title_pasta,HachiMaruPop,5,0,0,0
 img_title_pasta,HachiMaruPop,6,0,0,0
-img_title_pasta,HachiMaruPop,7,0,0,0
+img_title_pasta,HachiMaruPop,7,1,0,0
 img_title_pasta,HachiMaruPop,8,0,0,0
 img_title_pasta,HachiMaruPop,9,0,0,0
 img_title_pasta,HachiMaruPop,10,0,0,0
@@ -1571,14 +1571,14 @@ img_title_pasta,HachiMaruPop,69,0,0,0
 img_title_pasta,HachiMaruPop,70,0,0,0
 img_title_pasta,HachiMaruPop,71,0,0,0
 img_title_pasta,HachiMaruPop,72,0,0,0
-img_title_pasta,HachiMaruPop,73,0,0,0
+img_title_pasta,HachiMaruPop,73,0,0,1
 img_title_pasta,HachiMaruPop,74,0,0,0
 img_title_pasta,HachiMaruPop,75,0,0,0
 img_title_pasta,HachiMaruPop,76,0,0,0
 img_title_pasta,HachiMaruPop,77,0,0,0
 img_title_pasta,HachiMaruPop,78,0,0,0
 img_title_pasta,HachiMaruPop,79,0,0,0
-img_title_pasta,HachiMaruPop,80,0,0,0
+img_title_pasta,HachiMaruPop,80,1,0,0
 img_title_pasta,HachiMaruPop,81,0,0,0
 img_title_pasta,HachiMaruPop,82,0,0,0
 img_title_pasta,HachiMaruPop,83,0,0,0
@@ -1586,14 +1586,14 @@ img_title_pasta,HachiMaruPop,84,0,0,0
 img_title_pasta,HachiMaruPop,85,0,0,0
 img_title_pasta,HachiMaruPop,86,0,0,0
 img_title_pasta,HachiMaruPop,87,0,0,0
-img_title_pasta,HachiMaruPop,88,0,0,0
+img_title_pasta,HachiMaruPop,88,0,0,1
 img_title_pasta,HachiMaruPop,89,0,0,0
 img_title_pasta,HachiMaruPop,90,0,0,0
 img_title_pasta,HachiMaruPop,91,0,0,0
 img_title_pasta,HachiMaruPop,92,0,0,0
 img_title_pasta,HachiMaruPop,93,0,0,0
 img_title_pasta,HachiMaruPop,94,0,0,0
-img_title_pasta,HachiMaruPop,95,0,0,0
+img_title_pasta,HachiMaruPop,95,1,0,0
 img_title_pasta,HachiMaruPop,96,0,0,0
 img_title_pasta,HachiMaruPop,97,0,0,0
 img_title_pasta,HachiMaruPop,98,0,0,0
@@ -1605,7 +1605,7 @@ img_title_pasta,KaiseiDecol,3,0,0,0
 img_title_pasta,KaiseiDecol,4,0,0,0
 img_title_pasta,KaiseiDecol,5,0,0,0
 img_title_pasta,KaiseiDecol,6,0,0,0
-img_title_pasta,KaiseiDecol,7,0,0,0
+img_title_pasta,KaiseiDecol,7,0,0,1
 img_title_pasta,KaiseiDecol,8,0,0,0
 img_title_pasta,KaiseiDecol,9,0,0,0
 img_title_pasta,KaiseiDecol,10,0,0,0
@@ -1678,7 +1678,7 @@ img_title_pasta,KaiseiDecol,76,0,0,0
 img_title_pasta,KaiseiDecol,77,0,0,0
 img_title_pasta,KaiseiDecol,78,0,0,0
 img_title_pasta,KaiseiDecol,79,0,0,0
-img_title_pasta,KaiseiDecol,80,0,0,0
+img_title_pasta,KaiseiDecol,80,1,0,0
 img_title_pasta,KaiseiDecol,81,0,0,0
 img_title_pasta,KaiseiDecol,82,0,0,0
 img_title_pasta,KaiseiDecol,83,0,0,0
@@ -1693,7 +1693,7 @@ img_title_pasta,KaiseiDecol,91,0,0,0
 img_title_pasta,KaiseiDecol,92,0,0,0
 img_title_pasta,KaiseiDecol,93,0,0,0
 img_title_pasta,KaiseiDecol,94,0,0,0
-img_title_pasta,KaiseiDecol,95,0,0,0
+img_title_pasta,KaiseiDecol,95,0,0,1
 img_title_pasta,KaiseiDecol,96,0,0,0
 img_title_pasta,KaiseiDecol,97,0,0,0
 img_title_pasta,KaiseiDecol,98,0,0,0
@@ -1705,7 +1705,7 @@ img_title_pasta,NotoSansJP,3,0,0,0
 img_title_pasta,NotoSansJP,4,0,0,0
 img_title_pasta,NotoSansJP,5,0,0,0
 img_title_pasta,NotoSansJP,6,0,0,0
-img_title_pasta,NotoSansJP,7,0,0,0
+img_title_pasta,NotoSansJP,7,0,0,1
 img_title_pasta,NotoSansJP,8,0,0,0
 img_title_pasta,NotoSansJP,9,0,0,0
 img_title_pasta,NotoSansJP,10,0,0,0
@@ -1778,7 +1778,7 @@ img_title_pasta,NotoSansJP,76,0,0,0
 img_title_pasta,NotoSansJP,77,0,0,0
 img_title_pasta,NotoSansJP,78,0,0,0
 img_title_pasta,NotoSansJP,79,0,0,0
-img_title_pasta,NotoSansJP,80,0,0,0
+img_title_pasta,NotoSansJP,80,0,0,1
 img_title_pasta,NotoSansJP,81,0,0,0
 img_title_pasta,NotoSansJP,82,0,0,0
 img_title_pasta,NotoSansJP,83,0,0,0
@@ -1793,7 +1793,7 @@ img_title_pasta,NotoSansJP,91,0,0,0
 img_title_pasta,NotoSansJP,92,0,0,0
 img_title_pasta,NotoSansJP,93,0,0,0
 img_title_pasta,NotoSansJP,94,0,0,0
-img_title_pasta,NotoSansJP,95,0,0,0
+img_title_pasta,NotoSansJP,95,0,0,1
 img_title_pasta,NotoSansJP,96,0,0,0
 img_title_pasta,NotoSansJP,97,0,0,0
 img_title_pasta,NotoSansJP,98,0,0,0
@@ -1805,7 +1805,7 @@ img_title_pasta,NotoSerif,3,0,0,0
 img_title_pasta,NotoSerif,4,0,0,0
 img_title_pasta,NotoSerif,5,0,0,0
 img_title_pasta,NotoSerif,6,0,0,0
-img_title_pasta,NotoSerif,7,0,0,0
+img_title_pasta,NotoSerif,7,0,1,0
 img_title_pasta,NotoSerif,8,0,0,0
 img_title_pasta,NotoSerif,9,0,0,0
 img_title_pasta,NotoSerif,10,0,0,0
@@ -1878,7 +1878,7 @@ img_title_pasta,NotoSerif,76,0,0,0
 img_title_pasta,NotoSerif,77,0,0,0
 img_title_pasta,NotoSerif,78,0,0,0
 img_title_pasta,NotoSerif,79,0,0,0
-img_title_pasta,NotoSerif,80,0,0,0
+img_title_pasta,NotoSerif,80,0,1,0
 img_title_pasta,NotoSerif,81,0,0,0
 img_title_pasta,NotoSerif,82,0,0,0
 img_title_pasta,NotoSerif,83,0,0,0
@@ -1893,7 +1893,7 @@ img_title_pasta,NotoSerif,91,0,0,0
 img_title_pasta,NotoSerif,92,0,0,0
 img_title_pasta,NotoSerif,93,0,0,0
 img_title_pasta,NotoSerif,94,0,0,0
-img_title_pasta,NotoSerif,95,0,0,0
+img_title_pasta,NotoSerif,95,0,1,0
 img_title_pasta,NotoSerif,96,0,0,0
 img_title_pasta,NotoSerif,97,0,0,0
 img_title_pasta,NotoSerif,98,0,0,0
@@ -1905,7 +1905,7 @@ img_title_pasta,Reggae,3,0,0,0
 img_title_pasta,Reggae,4,0,0,0
 img_title_pasta,Reggae,5,0,0,0
 img_title_pasta,Reggae,6,0,0,0
-img_title_pasta,Reggae,7,0,0,0
+img_title_pasta,Reggae,7,0,1,0
 img_title_pasta,Reggae,8,0,0,0
 img_title_pasta,Reggae,9,0,0,0
 img_title_pasta,Reggae,10,0,0,0
@@ -1978,7 +1978,7 @@ img_title_pasta,Reggae,76,0,0,0
 img_title_pasta,Reggae,77,0,0,0
 img_title_pasta,Reggae,78,0,0,0
 img_title_pasta,Reggae,79,0,0,0
-img_title_pasta,Reggae,80,0,0,0
+img_title_pasta,Reggae,80,0,1,0
 img_title_pasta,Reggae,81,0,0,0
 img_title_pasta,Reggae,82,0,0,0
 img_title_pasta,Reggae,83,0,0,0
@@ -1993,7 +1993,7 @@ img_title_pasta,Reggae,91,0,0,0
 img_title_pasta,Reggae,92,0,0,0
 img_title_pasta,Reggae,93,0,0,0
 img_title_pasta,Reggae,94,0,0,0
-img_title_pasta,Reggae,95,0,0,0
+img_title_pasta,Reggae,95,0,1,0
 img_title_pasta,Reggae,96,0,0,0
 img_title_pasta,Reggae,97,0,0,0
 img_title_pasta,Reggae,98,0,0,0
@@ -2005,7 +2005,7 @@ img_title_pasta,Stick,3,0,0,0
 img_title_pasta,Stick,4,0,0,0
 img_title_pasta,Stick,5,0,0,0
 img_title_pasta,Stick,6,0,0,0
-img_title_pasta,Stick,7,0,0,0
+img_title_pasta,Stick,7,0,1,0
 img_title_pasta,Stick,8,0,0,0
 img_title_pasta,Stick,9,0,0,0
 img_title_pasta,Stick,10,0,0,0
@@ -2078,7 +2078,7 @@ img_title_pasta,Stick,76,0,0,0
 img_title_pasta,Stick,77,0,0,0
 img_title_pasta,Stick,78,0,0,0
 img_title_pasta,Stick,79,0,0,0
-img_title_pasta,Stick,80,0,0,0
+img_title_pasta,Stick,80,0,1,0
 img_title_pasta,Stick,81,0,0,0
 img_title_pasta,Stick,82,0,0,0
 img_title_pasta,Stick,83,0,0,0
@@ -2093,7 +2093,7 @@ img_title_pasta,Stick,91,0,0,0
 img_title_pasta,Stick,92,0,0,0
 img_title_pasta,Stick,93,0,0,0
 img_title_pasta,Stick,94,0,0,0
-img_title_pasta,Stick,95,0,0,0
+img_title_pasta,Stick,95,0,1,0
 img_title_pasta,Stick,96,0,0,0
 img_title_pasta,Stick,97,0,0,0
 img_title_pasta,Stick,98,0,0,0

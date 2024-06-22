@@ -174,7 +174,7 @@ class ImageApp:
                     print(f"Label {idx} placed at row {idx // 3 + 1}, column {idx % 3}")  # デバッグ情報
                 except Exception as e:
                     print(f"Error loading image {img_path}: {e}")  # エラーメッセージ
-            if self.current_set_index % 3 == 0:
+            if self.current_set_index % 25 == 0:
                 if self.zero:
                     self.zero = False
                 else:
@@ -185,8 +185,8 @@ class ImageApp:
             
         else:
             self.current_set_index = 0
-            random.shuffle(self.images_set)
-            self.display_next_set()
+            self.save_state()
+            self.root.after(0, self.show_end_message)
 
     def display_tutorial(self):
         print(f"Displaying set tutorial")  # デバッグ情報
@@ -236,6 +236,9 @@ class ImageApp:
                 self.next_button.grid_remove()
                 for label in self.image_labels:
                     label.grid_forget()
+                for label in self.text_labels:
+                    print(label)
+                    label.grid_remove()
                 self.step += 1
         elif self.step == 2:
             self.title_h.grid_remove()
@@ -326,6 +329,8 @@ class ImageApp:
         for label in self.image_labels:
             label.grid_forget()
             print(f"Label {label} hidden")  # デバッグ情報
+        for label in self.text_labels:
+            label.grid_remove()
         end_label = tk.Label(self.root, text="以上で終了します。\nありがとうございました。", font=("Helvetica", 16))
         end_label.grid(row=1, column=1, padx=5, pady=5)
         print("End message displayed")  # デバッグ情報
