@@ -1,6 +1,7 @@
 import os
 import json
 import shutil
+import re
 
 # delete_list.jsonファイルを読み込む
 with open('delete_list.json', 'r') as f:
@@ -11,7 +12,7 @@ titles = ['bowl', 'omret', 'pasta', 'salad', 'soup']
 fonts = ['DelaGothic', 'HachiMaruPop', 'KaiseiDecol', 'NotoSansJP', 'NotoSerif', 'Reggae', 'Stick']
 
 base_dir = 'imgs_pre'
-new_base_dir = 'imgs'
+new_base_dir = 'imgs_2'
 
 # 新しいディレクトリを作成
 os.makedirs(new_base_dir, exist_ok=True)
@@ -31,6 +32,12 @@ for title in titles:
                 if os.path.exists(img_path):
                     os.remove(img_path)
 
+
+# 数値順にソートするための関数
+def extract_number(filename):
+    match = re.search(r'(\d+)_', filename)
+    return int(match.group(1)) if match else float('inf')
+
 # 残った画像を連番にリネームして新しいディレクトリに保存
 for title in titles:
     for font in fonts:
@@ -39,10 +46,11 @@ for title in titles:
         os.makedirs(new_font_dir, exist_ok=True)
         
         if os.path.exists(font_dir):
-            images = sorted(os.listdir(font_dir))
+            images = sorted(os.listdir(font_dir), key=extract_number)
             for idx, img in enumerate(images):
+                print(idx, img)
                 old_img_path = os.path.join(font_dir, img)
-                new_img_name = f'{idx + 1}_{font}.jpg'
+                new_img_name = f'{idx + 1}_{font}.jpg'  # 新しい連番でリネーム
                 new_img_path = os.path.join(new_font_dir, new_img_name)
                 
                 # 新しいディレクトリに移動

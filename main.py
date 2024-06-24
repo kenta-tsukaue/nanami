@@ -95,10 +95,10 @@ class ImageApp:
             fonts = ['DelaGothic', 'HachiMaruPop', 'KaiseiDecol', 'NotoSansJP', 'NotoSerif', 'Reggae', 'Stick']
             data = []
             for title in titles:
-                for font in fonts:
-                    for i in range(1, 101):
-                        data.append([title, font, i, 0, 0, 0])
-            df = pd.DataFrame(data, columns=['title', 'font', 'number', '5', '1', '0'])
+                for i in range(1, 101):
+                    for font in fonts:
+                        data.append([title, i, font, 0, 0, 0])
+            df = pd.DataFrame(data, columns=['title', 'number', 'font', '5', '1', '0'])
             df.to_csv(self.results_file, index=False)
             print("Created new results.csv")
         return df
@@ -128,6 +128,7 @@ class ImageApp:
                         image_collections[title].append(image_set)
 
         if self.current_set_index == 0:
+            print("新たにデータを作り直します。")
             for key in image_collections:
                 random.shuffle(image_collections[key])
             
@@ -137,7 +138,8 @@ class ImageApp:
                     for _ in range(5):
                         if image_collections[title]:
                             all_images.append(image_collections[title].pop(0))
-            
+    
+
             self.images_set = all_images[:500]
             self.save_state()
         else:
