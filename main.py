@@ -17,6 +17,7 @@ class ImageApp:
         self.folder_path = os.path.join(os.getcwd(), "imgs")
         self.tutorial_folder_path = os.path.join(os.getcwd(), "test_img")
         self.current_set_index = 0
+        self.current_round = 0
         self.images_set = []
         self.tutorial_images_set = []
         self.state_file = "image_viewer_state.json"
@@ -178,8 +179,14 @@ class ImageApp:
                 if self.zero:
                     self.zero = False
                 else:
-                    self.save_state()
-                    self.root.after(0, self.show_end_message)
+                    if self.current_set_index % 500 == 0:
+                        self.current_round += 1
+                        self.current_set_index = 0
+                        self.save_state()
+                        self.root.after(0, self.show_end_message)
+                    else:
+                        self.save_state()
+                        self.root.after(0, self.show_end_message)
             self.current_set_index += 1
             self.root.update_idletasks()
             
@@ -359,9 +366,11 @@ class ImageApp:
             with open(self.state_file, "r") as f:
                 state = json.load(f)
                 self.current_set_index = state.get("current_set_index", 0)
+                self.current_round = state.get("current_round", 0)
                 print(f"Loaded state: {state}")  # デバッグ情報
         else:
             self.current_set_index = 0
+            self.current_round = 0
             print("No state file found, starting from index 0")  # デバッグ情報
 
     def load_images_set(self):
@@ -373,6 +382,7 @@ class ImageApp:
     def save_state(self):
         with open(self.state_file, "w") as f:
             state = {
+                "current_round": self.current_round,
                 "current_set_index": self.current_set_index,
                 "images_set": self.images_set
             }
