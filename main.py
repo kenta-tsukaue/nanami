@@ -16,10 +16,13 @@ class ImageApp:
         
         self.folder_path = os.path.join(os.getcwd(), "imgs")
         self.tutorial_folder_path = os.path.join(os.getcwd(), "test_img")
+        self.tutorial_folder_path_2 = os.path.join(os.getcwd(), "test_img_2")
         self.current_set_index = 0
+        self.start_index = 0
         self.current_round = 0
         self.images_set = []
         self.tutorial_images_set = []
+        self.tutorial_images_set_2 = []
         self.state_file = "image_viewer_state.json"
         self.load_state()
         
@@ -85,6 +88,7 @@ class ImageApp:
         self.text_labels = [tk.Label(root, text="", font=("Helvetica", 16, "bold"), fg="white", bg="red", width=20, height=1) for _ in range(7)]
         self.load_images()
         self.load_tutorial_images()
+        self.load_tutorial_images_2()
 
     def load_or_create_results(self):
         if os.path.exists(self.results_file):
@@ -140,8 +144,9 @@ class ImageApp:
                             all_images.append(image_collections[title].pop(0))
     
 
-            self.images_set = all_images[:500]
-            self.save_state()
+            #self.images_set = all_images[:500] #作り直す必要がなくなった
+            #self.save_state()
+            self.load_images_set()
         else:
             self.load_images_set()
     
@@ -151,6 +156,13 @@ class ImageApp:
             img_path = os.path.join(self.tutorial_folder_path, f"test_{font}.jpg")
             if os.path.exists(img_path):
                 self.tutorial_images_set.append(img_path)
+    
+    def load_tutorial_images_2(self):
+        fonts = ['DelaGothic', 'HachiMaruPop', 'KaiseiDecol', 'NotoSansJP', 'NotoSerif', 'Reggae', 'Stick']
+        for font in fonts:
+            img_path = os.path.join(self.tutorial_folder_path_2, f"test_{font}.jpg")
+            if os.path.exists(img_path):
+                self.tutorial_images_set_2.append(img_path)
 
     def display_next_set(self):
         self.description_text.grid(row=0, column=0, columnspan=5, pady=10)
@@ -177,7 +189,7 @@ class ImageApp:
                     print(f"Label {idx} placed at row {idx // 3 + 1}, column {idx % 3}")  # デバッグ情報
                 except Exception as e:
                     print(f"Error loading image {img_path}: {e}")  # エラーメッセージ
-            if self.current_set_index % 25 == 0:
+            if self.current_set_index % 50 == 0:
                 if self.zero:
                     self.zero = False
                 else:
@@ -197,11 +209,38 @@ class ImageApp:
             self.save_state()
             self.root.after(0, self.show_end_message)
 
-    def display_tutorial(self):
+    def display_tutorial_1(self):
         print(f"Displaying set tutorial")  # デバッグ情報
         self.description_text.grid(row=0, column=0, columnspan=5, pady=10)
         self.next_button.grid(row=2, column=3, pady=5)  # Nextボタンを画像の横に配置
+        self.reset_label_borders()
         image_paths = self.tutorial_images_set
+        for idx, img_path in enumerate(image_paths):
+            try:
+                img = Image.open(img_path)
+                img.thumbnail((280, 280)) #ここで画像サイズ調整
+                img = ImageTk.PhotoImage(img)
+                label = self.image_labels[idx]
+                label.config(image=img)
+                label.image = img
+                label.image_path = img_path  # ここで画像パスをラベルに格納
+                label.bind("<Button-1>", lambda e, l=label, t=self.text_labels[idx]: self.on_left_click(l, t))
+                label.bind("<Button-2>", lambda e, l=label, t=self.text_labels[idx]: self.on_right_click(l, t))
+                label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8) #ここで画像サイズ調整
+                text_label = self.text_labels[idx]
+                text_label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8, sticky="n")
+                text_label.lower()
+                print(f"Label {idx} placed at row {idx // 3 + 1}, column {idx % 3}")  # デバッグ情報
+            except Exception as e:
+                print(f"Error loading image {img_path}: {e}")  # エラーメッセージ
+        self.root.update_idletasks()
+
+    def display_tutorial_2(self):
+        print(f"Displaying set tutorial")  # デバッグ情報
+        self.description_text.grid(row=0, column=0, columnspan=5, pady=10)
+        self.next_button.grid(row=2, column=3, pady=5)  # Nextボタンを画像の横に配置
+        self.reset_label_borders()
+        image_paths = self.tutorial_images_set_2
         for idx, img_path in enumerate(image_paths):
             try:
                 img = Image.open(img_path)
@@ -232,8 +271,15 @@ class ImageApp:
         if self.step == 0:
             self.title.grid_remove()
             self.start_button.place_forget()
-            self.display_tutorial()
-            self.step += 1
+            self.display_tutorial_1()
+            self.step += 0.5
+        elif self.step == 0.5:
+            for label in self.image_labels:
+                label.grid_forget()
+            for label in self.text_labels:
+                label.grid_remove()
+            self.display_tutorial_2()
+            self.step += 0.5
         elif self.step == 1:
             if len(self.red_labels) < 2 or len(self.blue_labels) < 2:
                 self.show_error_message("赤と青の枠はそれぞれ二つ選んでください")
@@ -351,6 +397,15 @@ class ImageApp:
         print("Scores:")
         for key, score in self.score_dict.items():
             print(f"{key}: {score}")
+
+        with open(f'result_{self.start_index}_{self.current_set_index-1}.json', "w") as f:
+            state = self.score_dict
+            json.dump(state, f)
+        
+        """
+        統合の時に絶対使う！今はコメントアウト！
+        for key, score in self.score_dict.items():
+            print(f"{key}: {score}")
             title, font, number = key.rsplit('_', 2)
             print(title, font, number)
             number = int(number)
@@ -362,12 +417,14 @@ class ImageApp:
                 self.df.loc[(self.df['title'] == title) & (self.df['font'] == font) & (self.df['number'] == number), '0'] += 1
                 self.df.to_csv(self.results_file, index=False)
         print('Updated results.csv')
+        """
 
     def load_state(self):
         if os.path.exists(self.state_file):
             with open(self.state_file, "r") as f:
                 state = json.load(f)
                 self.current_set_index = state.get("current_set_index", 0)
+                self.start_index = state.get("current_set_index", 0)
                 self.current_round = state.get("current_round", 0)
                 print(f"Loaded state: {state}")  # デバッグ情報
         else:
