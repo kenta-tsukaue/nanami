@@ -19,7 +19,8 @@ os.makedirs(new_base_dir, exist_ok=True)
 
 # 削除リストの数が50に満たない場合はエラーを出力
 for title in titles:
-    if len(delete_list[title]) < 50:
+    if len(delete_list[title]) != 50:
+        print(len(delete_list[title]))
         raise ValueError(f"The delete list for {title} has less than 50 items.")
 
 # 指定された画像を削除

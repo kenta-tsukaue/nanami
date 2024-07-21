@@ -33,8 +33,8 @@ class ImageApp:
         self.df = self.load_or_create_results()
 
         # チュートリアルタイトルとボタン
-        self.title = tk.Label(self.root, text="チュートリアル", font=("Helvetica", 50))
-        self.title.grid(row=0, column=0, columnspan=5, pady=300, padx=540)
+        self.title = tk.Label(self.root, text="練習問題", font=("Helvetica", 50))
+        self.title.grid(row=0, column=0, columnspan=5, pady=300, padx=600)
         self.start_button = tk.Button(root, text="開始", command=self.on_next_button_click, font=("Helvetica", 16), width=20, height=5)
         self.start_button.place(x=600, y=400)
 

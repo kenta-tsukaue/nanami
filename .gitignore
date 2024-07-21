@@ -1,7 +1,11 @@
 **/__pycache__/**
 /imgs
 /test_img
+/test_img_2
 /imgs_copy
 /imgs_pre
+/build
+/dist
 .DS_Store
 imgs.zip
+main.spec
