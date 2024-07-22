@@ -5,14 +5,17 @@ from tkinter import messagebox
 from PIL import Image, ImageTk
 import json
 import pandas as pd
+from datetime import datetime
+
 
 
 class ImageApp:
     def __init__(self, root):
         self.root = root
         self.zero = True
-        self.step = 0
+        self.step = -1
         self.root.title("Image Viewer")
+        self.user_name = None
         
         self.folder_path = os.path.join(os.getcwd(), "imgs")
         self.tutorial_folder_path = os.path.join(os.getcwd(), "test_img")
@@ -32,11 +35,24 @@ class ImageApp:
         self.results_file = "results.csv"
         self.df = self.load_or_create_results()
 
+        # 名前入力のタイトルとインプット欄とボタン
+        self.title_n = tk.Label(self.root, text="あなたの名前を入力してください", font=("Helvetica", 30))
+        self.title_n.grid(row=0, column=0, columnspan=5, pady=50, padx=100)
+        self.label = tk.Label(root, text="(例) 佐藤大輔")
+        self.label.grid(row=1, column=0,  padx=160, pady=10)
+        # Entry field
+        self.entry = tk.Entry(root, font=("Helvetica", 20), width=30)
+        self.entry.grid(row=2, column=0, padx=160, pady=10)
+        # Submit button
+        self.submit_button = tk.Button(root, text="Submit", command=self.on_next_button_click, font=("Helvetica", 15))
+        self.submit_button.grid(row=3, column=0,  padx=160, pady=20)
+
+
         # チュートリアルタイトルとボタン
         self.title = tk.Label(self.root, text="練習問題", font=("Helvetica", 50))
-        self.title.grid(row=0, column=0, columnspan=5, pady=300, padx=600)
+        #self.title.grid(row=0, column=0, columnspan=5, pady=300, padx=600)
         self.start_button = tk.Button(root, text="開始", command=self.on_next_button_click, font=("Helvetica", 16), width=20, height=5)
-        self.start_button.place(x=600, y=400)
+        #self.start_button.place(x=600, y=400)
 
         # 本番タイトルとボタン
         self.title_h = tk.Label(self.root, text="本番", font=("Helvetica", 50))
@@ -44,15 +60,12 @@ class ImageApp:
         self.start_button_h = tk.Button(root, text="開始", command=self.on_next_button_click, font=("Helvetica", 16), width=20, height=5)
         #self.start_button_h.place(x=600, y=400)
 
-        # 説明文を追加
-        self.description_text = tk.Text(root, height=8, width=100, font=("Helvetica", 14), wrap="word", borderwidth=0)
+        # 説明文を追加(上段)
+        self.description_text = tk.Text(root, height=3, width=100, font=("Helvetica", 10), wrap="word", borderwidth=0)
         description = (
             "『魅力的である』と感じる料理画像を【左クリック】で【2枚】選択してください.\n"
             "『魅力的でない』と感じる料理画像を【右クリック】で【2枚】選択してください.\n"
             "全ての選択が終了したら【ウィンドウ上の（次へ）】あるいは【Enterキー】を押して次へ進んでください.\n"
-            "※注意事項\n"
-            "『魅力度』とは『フォントの印象が料理画像の印象に合っており，直感的に美味しさを想起させる度合い』と定義します.\n"
-            "料理画像を選択する際には,テキストの配置やテキストの色は無視して考えてください."
         )
 
         self.description_text.insert("1.0", description)
@@ -72,20 +85,41 @@ class ImageApp:
         for start, end in bold_ranges:
             self.description_text.tag_add("bold", start, end)
 
-        self.description_text.tag_config("bold", font=("Helvetica", 14, "bold"))        
+        self.description_text.tag_config("bold", font=("Helvetica", 10, "bold"))
+
+        # 説明文を追加(下段)
+        self.description_text_sita = tk.Text(root, height=5, width=130, font=("Helvetica", 10), wrap="word", borderwidth=0)
+        description_sita = (
+            "※注意事項\n"
+            "・『魅力度』とは『フォントの印象が料理画像及び料理タイトルの印象に全体的に合っている度合い』と定義します．\n"
+            "・料理画像そのものが美味しそうかどうかは考えず，画像に対してフォントが印象通りで美味しく思えるかどうかで選択をしてください．\n"
+            "・選択する際には，テキストの配置やテキストの色は無視して考えてください．\n"
+        )
+
+        self.description_text_sita.insert("1.0", description_sita)
+        
+         # 太文字にする範囲を設定
+        bold_ranges_sita = [
+            ("1.1", "1.5"),     # ※注意事項
+        ]
+
+        for start, end in bold_ranges_sita:
+            self.description_text_sita.tag_add("bold", start, end)
+
+        self.description_text_sita.tag_config("bold", font=("Helvetica", 10, "bold"))        
     
 
         # 画像ラベルを配置
         self.image_labels = [tk.Label(root, borderwidth=2, relief="solid", highlightbackground="white", highlightthickness=7) for _ in range(7)]
 
-        self.next_button = tk.Button(root, text="次へ", command=self.on_next_button_click, font=("Helvetica", 16), width=20, height=10)
+        self.next_button = tk.Button(root, text="次へ", command=self.on_next_button_click, font=("Helvetica", 16), width=13, height=6)
         #self.next_button.grid(row=2, column=3, pady=5)  # Nextボタンを画像の横に配置
 
         self.root.bind('<Return>', lambda event: self.on_next_button_click())
 
 
         self.image_labels = [tk.Label(root, borderwidth=2, relief="solid", highlightbackground="white", highlightthickness=7) for _ in range(7)]
-        self.text_labels = [tk.Label(root, text="", font=("Helvetica", 16, "bold"), fg="white", bg="red", width=20, height=1) for _ in range(7)]
+        self.text_labels = [tk.Label(root, text="", font=("Helvetica", 16, "bold"), fg="white", bg="red", width=10, height=1) for _ in range(7)]
         self.load_images()
         self.load_tutorial_images()
         self.load_tutorial_images_2()
@@ -127,7 +161,8 @@ class ImageApp:
                     for font in fonts:
                         font_path = os.path.join(title_path, font, f"{i}_{font}.jpg")
                         if os.path.exists(font_path):
-                            image_set.append(font_path)
+                            relative_font_path = os.path.join("imgs", title, font, f"{i}_{font}.jpg")
+                            image_set.append(relative_font_path)
                     if len(image_set) == len(fonts):
                         image_collections[title].append(image_set)
 
@@ -166,23 +201,31 @@ class ImageApp:
 
     def display_next_set(self):
         self.description_text.grid(row=0, column=0, columnspan=5, pady=10)
+        self.description_text_sita.grid(row=3, column=0, columnspan=5, pady=10)
         self.next_button.grid(row=2, column=3, pady=5)  # Nextボタンを画像の横に配置
         print(f"Displaying set {self.current_set_index}")  # デバッグ情報
+         # 進捗状況を表示するラベルを作成または更新
+        progress_text = f"進捗: {self.current_set_index % 50}/50"
+        if not hasattr(self, 'progress_label'):
+            self.progress_label = tk.Label(self.root, text=progress_text, font=("Helvetica", 12))
+            self.progress_label.grid(row=0, column=0, sticky="nw", padx=10, pady=10)
+        else:
+            self.progress_label.config(text=progress_text)
         if self.current_set_index < len(self.images_set):
             self.reset_label_borders()  # 追加：枠の色をリセット
             image_paths = self.images_set[self.current_set_index]
             for idx, img_path in enumerate(image_paths):
                 try:
                     img = Image.open(img_path)
-                    img.thumbnail((280, 280)) #ここで画像サイズ調整
+                    img.thumbnail((200, 200)) #ここで画像サイズ調整
                     img = ImageTk.PhotoImage(img)
                     label = self.image_labels[idx]
                     label.config(image=img)
                     label.image = img
                     label.image_path = img_path  # ここで画像パスをラベルに格納
                     label.bind("<Button-1>", lambda e, l=label, t=self.text_labels[idx]: self.on_left_click(l, t))
-                    label.bind("<Button-2>", lambda e, l=label, t=self.text_labels[idx]: self.on_right_click(l, t))
-                    label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8) #ここで画像サイズ調整
+                    label.bind("<Button-3>", lambda e, l=label, t=self.text_labels[idx]: self.on_right_click(l, t))
+                    label.grid(row=idx // 4 + 1, column=idx % 4,  padx=10, pady=3) #ここで画像サイズ調整
                     text_label = self.text_labels[idx]
                     text_label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8, sticky="n")
                     text_label.lower()
@@ -212,21 +255,22 @@ class ImageApp:
     def display_tutorial_1(self):
         print(f"Displaying set tutorial")  # デバッグ情報
         self.description_text.grid(row=0, column=0, columnspan=5, pady=10)
+        self.description_text_sita.grid(row=3, column=0, columnspan=5, pady=10)
         self.next_button.grid(row=2, column=3, pady=5)  # Nextボタンを画像の横に配置
         self.reset_label_borders()
         image_paths = self.tutorial_images_set
         for idx, img_path in enumerate(image_paths):
             try:
                 img = Image.open(img_path)
-                img.thumbnail((280, 280)) #ここで画像サイズ調整
+                img.thumbnail((200, 200)) #ここで画像サイズ調整
                 img = ImageTk.PhotoImage(img)
                 label = self.image_labels[idx]
                 label.config(image=img)
                 label.image = img
                 label.image_path = img_path  # ここで画像パスをラベルに格納
                 label.bind("<Button-1>", lambda e, l=label, t=self.text_labels[idx]: self.on_left_click(l, t))
-                label.bind("<Button-2>", lambda e, l=label, t=self.text_labels[idx]: self.on_right_click(l, t))
-                label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8) #ここで画像サイズ調整
+                label.bind("<Button-3>", lambda e, l=label, t=self.text_labels[idx]: self.on_right_click(l, t))
+                label.grid(row=idx // 4 + 1, column=idx % 4, padx=10, pady=3) #ここで画像サイズ調整
                 text_label = self.text_labels[idx]
                 text_label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8, sticky="n")
                 text_label.lower()
@@ -238,21 +282,22 @@ class ImageApp:
     def display_tutorial_2(self):
         print(f"Displaying set tutorial")  # デバッグ情報
         self.description_text.grid(row=0, column=0, columnspan=5, pady=10)
+        self.description_text_sita.grid(row=3, column=0, columnspan=5, pady=10)
         self.next_button.grid(row=2, column=3, pady=5)  # Nextボタンを画像の横に配置
         self.reset_label_borders()
         image_paths = self.tutorial_images_set_2
         for idx, img_path in enumerate(image_paths):
             try:
                 img = Image.open(img_path)
-                img.thumbnail((280, 280)) #ここで画像サイズ調整
+                img.thumbnail((200, 200)) #ここで画像サイズ調整
                 img = ImageTk.PhotoImage(img)
                 label = self.image_labels[idx]
                 label.config(image=img)
                 label.image = img
                 label.image_path = img_path  # ここで画像パスをラベルに格納
                 label.bind("<Button-1>", lambda e, l=label, t=self.text_labels[idx]: self.on_left_click(l, t))
-                label.bind("<Button-2>", lambda e, l=label, t=self.text_labels[idx]: self.on_right_click(l, t))
-                label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8) #ここで画像サイズ調整
+                label.bind("<Button-3>", lambda e, l=label, t=self.text_labels[idx]: self.on_right_click(l, t))
+                label.grid(row=idx // 4 + 1, column=idx % 4, padx=10, pady=3) #ここで画像サイズ調整
                 text_label = self.text_labels[idx]
                 text_label.grid(row=idx // 4 + 1, column=idx % 4, padx=30, pady=8, sticky="n")
                 text_label.lower()
@@ -268,26 +313,43 @@ class ImageApp:
         self.blue_labels = []
 
     def on_next_button_click(self):
-        if self.step == 0:
+        if self.step == -1:
+            self.user_name = self.entry.get()
+            print(self.user_name)
+            if self.user_name and self.user_name != "":
+                self.title_n.grid_remove()
+                self.label.grid_remove()
+                self.entry.grid_remove()
+                self.submit_button.grid_remove()
+                self.title.grid(row=0, column=0, columnspan=5, pady=40, padx=300)
+                self.start_button.grid(row=1, column=0,  padx=330, pady=30)
+                self.step += 1
+            else:
+                messagebox.showwarning("Input Error", "Please enter a name.")
+        elif self.step == 0:
             self.title.grid_remove()
-            self.start_button.place_forget()
+            self.start_button.grid_remove()
             self.display_tutorial_1()
             self.step += 0.5
         elif self.step == 0.5:
-            for label in self.image_labels:
-                label.grid_forget()
-            for label in self.text_labels:
-                label.grid_remove()
-            self.display_tutorial_2()
-            self.step += 0.5
+            if len(self.red_labels) < 2 or len(self.blue_labels) < 2:
+                self.show_error_message("赤と青の枠はそれぞれ二つ選んでください")
+            else:
+                for label in self.image_labels:
+                    label.grid_forget()
+                for label in self.text_labels:
+                    label.grid_remove()
+                self.display_tutorial_2()
+                self.step += 0.5
         elif self.step == 1:
             if len(self.red_labels) < 2 or len(self.blue_labels) < 2:
                 self.show_error_message("赤と青の枠はそれぞれ二つ選んでください")
             else:
                 #タイトルの表示
-                self.title_h.grid(row=0, column=0, columnspan=5, pady=300, padx=630)
-                self.start_button_h.place(x=600, y=400)
+                self.title_h.grid(row=0, column=0, columnspan=5, pady=40, padx=300)
+                self.start_button_h.grid(row=1, column=0,  padx=330, pady=30)
                 self.description_text.grid_remove()
+                self.description_text_sita.grid_remove()
                 self.next_button.grid_remove()
                 for label in self.image_labels:
                     label.grid_forget()
@@ -297,7 +359,7 @@ class ImageApp:
                 self.step += 1
         elif self.step == 2:
             self.title_h.grid_remove()
-            self.start_button_h.place_forget()
+            self.start_button_h.grid_remove()
             self.display_next_set()
             self.step += 1
         elif self.step == 3:
@@ -381,6 +443,7 @@ class ImageApp:
     def show_end_message(self):
         print("Showing end message")  # デバッグ情報
         self.description_text.grid_remove()
+        self.description_text_sita.grid_remove()
         for label in self.image_labels:
             label.grid_forget()
             print(f"Label {label} hidden")  # デバッグ情報
@@ -397,8 +460,14 @@ class ImageApp:
         print("Scores:")
         for key, score in self.score_dict.items():
             print(f"{key}: {score}")
-
-        with open(f'result_{self.start_index}_{self.current_set_index-1}.json', "w") as f:
+        
+        # Get the current timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        
+        # Create the filename with the timestamp
+        filename = f'result_{self.start_index}_{self.current_set_index-1}_{timestamp}_{self.user_name}.json'
+        
+        with open(filename, "w") as f:
             state = self.score_dict
             json.dump(state, f)
         
