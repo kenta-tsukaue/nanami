@@ -174,7 +174,7 @@ class ImageApp:
             all_images = []
             while any(image_collections.values()):
                 for title in titles:
-                    for _ in range(5):
+                    for _ in range(10):
                         if image_collections[title]:
                             all_images.append(image_collections[title].pop(0))
     
@@ -495,7 +495,7 @@ class ImageApp:
                 self.current_set_index = state.get("current_set_index", 0)
                 self.start_index = state.get("current_set_index", 0)
                 self.current_round = state.get("current_round", 0)
-                print(f"Loaded state: {state}")  # デバッグ情報
+                #print(f"Loaded state: {state}")  # デバッグ情報
         else:
             self.current_set_index = 0
             self.current_round = 0
@@ -505,7 +505,7 @@ class ImageApp:
         with open(self.state_file, "r") as f:
             state = json.load(f)
             self.images_set = state.get("images_set", [])
-            print(f"Loaded images set: {len(self.images_set)} sets")  # デバッグ情報
+            #print(f"Loaded images set: {len(self.images_set)} sets")  # デバッグ情報
 
     def save_state(self):
         with open(self.state_file, "w") as f:
